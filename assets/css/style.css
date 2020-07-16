@@ -69,3 +69,31 @@ header {
 
 }
 
+.menucontainer {
+    font-size:  0;
+}
+
+#nav li {
+    font-size: 14px;
+    padding: 0px;
+}
+
+.menuitem {
+     height: 120px;
+     text-align: center;
+     padding: 0;
+
+}
+
+/* styling the <a> tag which is going to be clickable button*/
+.menuitem a {
+    width: 100%;
+    text-decoration: none; /*removes default underscore on text link*/
+    color: #fff;
+    height: 120px;
+}
+
+.menuitem a i {
+    padding-top: 22px;
+    display: block; /*pushes i element, which is usually inline, to its own line by using block/*
+}
