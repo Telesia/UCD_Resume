@@ -73,6 +73,10 @@ header {
     font-size:  0;
 }
 
+#nav {
+    margin: 0; /* setting the default ul margin to 0 to lose the gap*/
+}
+
 #nav li {
     font-size: 14px;
     padding: 0px;
@@ -95,5 +99,25 @@ header {
 
 .menuitem a i {
     padding-top: 22px;
-    display: block; /*pushes i element, which is usually inline, to its own line by using block/*
+    display: block; /*pushes i element, which is usually inline, to its own line by using block*/
+    color: #fafafa;
+    font-size: 26px;
+}
+
+.menuitem span {
+    display: block;
+    width: 100%;
+    padding-top: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+/*-----------------------------------------Hover.css */
+
+.hvr-sweep-to-bottom:before {
+    background: rgba(0,0,0,0.2);
+    height: 120px;
 }
