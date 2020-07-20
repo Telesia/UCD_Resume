@@ -11,7 +11,7 @@
 </head>  
 <body>
     <header>
-        <div class="row no-gutters">
+        <div class="row no-gutters"> <!--bootstrap row-->
             <a href="index.html" class="col-md-4 logo"></a>
             <div class="col-md-8">
                 <div class="row no-gutters bg-color-name-title"> <!--set up this class to add background color to name and title together-->
@@ -47,9 +47,68 @@
     
     </section>
 
-    <footer>
-    
-    </footer>
+    <footer class="container-fluid">
+        <div id="footer-details" class="row"> <!--bootstrap row first-->
+            <div class="col-sm-4">
+                <h5 class="uppercase general-sub">About</h5>
+                <p class="inline-block">
+                    Full Stack Web Developer. Skilled in everything from HTML to Heroku. 
+                    The Capacity for structural and design thinking.</p>
+            </div> <!--Create multiple elements quickly by using Emmet. In this example put .col-sm-4*3 (or *4 if you wanted 4)-->
+            <div class="col-sm-4">
+                <h5 class="uppercase general-sub">Download</h5>
+                <p class="inline-block">
+                    Need a printable version of my CV? Download it here. 
+                    <a href="#" target="_blank" class="cv-pdf">
+                        <i class="fa fa-download" aria-hidden="true"></i>
+                        <span class= "sr-only">Download Link.</span>
+                    </a>
+                </p>
+            </div>
+            <div class="col-sm-4"> <!--creating social media link next to each other-->
+                <h5 class="uppercase general-sub">Social</h5>
+                    <ul class="list-inline social-links">
+                        <li class="list-inline-item">
+                            <a href="#" target="_blank">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                                <span class="sr-only">Facebook</span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" target="_blank">
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                                <span class="sr-only">Twitter</span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" target="_blank">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                <span class="sr-only">LinkedIn</span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" target="_blank">
+                                <i class="fa fa-pinterest" aria-hidden="true"></i>
+                                <span class="sr-only">Pinterest</span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" target="_blank">
+                                <i class="fa fa-youtube" aria-hidden="true"></i>
+                                <span class="sr-only">YouTube</span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" target="_blank">
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                                <span class="sr-only">Instagram</span>
+                            </a>
+                        </li>
+                    </ul>
+            </div>
+        </div>
+
+     </footer>
     
 </body>
 </html>
