@@ -44,7 +44,9 @@ function repoInformationHTML(repos) {
             </div>`;
 }
 
-function fetchGitHubInformation() {
+function fetchGitHubInformation(event) {
+    $("#gh-user-data").html(""); // need to add an empty string to the div to clear it after each github user search :)
+    $("#gh-repo-data").html("");
     var username = $("#gh-username").val();
     if(!username) {
         $("#gh-user-data").html(`<h2>Please enter a GitHub Username</h2>`);
@@ -74,12 +76,18 @@ function fetchGitHubInformation() {
             if (errorResponse.status === 404) {
                 $("#gh-user-data").html(`<h2>No info found for username ${username}</h2>`);
             }
+
+            /*else(errorResponse.status === 403) {
+                var resetTime = new Date(errorResponse.getResponseHeader('X-RateLimit-Reset')*1000);
+                $("#gh-user-data").html(`<h4>Too many requests, please wait until ${resetTime.toLocaleTimeString()}</h4>`);
+            }*/
             else {
                 console.log(errorResponse); //if not a 404 then log the errorResponse to the console
                 $("#gh-user-data").html(`<h2>Error: ${errorResponse.responseJSON.message}</h2>`);
             }
         });
 }
-console.log(user.name);
 
+//this piece of code below will mean that the octocat (github's avatar user) will display as a generic example of the search box we created.
+$(document).ready(fetchGitHubInformation);
 
